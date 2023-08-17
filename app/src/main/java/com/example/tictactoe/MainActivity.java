@@ -2,8 +2,10 @@ package com.example.tictactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.tictactoe.databinding.ActivityMainBinding;
@@ -102,6 +104,22 @@ public class MainActivity extends AppCompatActivity {
                 if (isBoxSelectable(8)){
                     performAction((ImageView) view, 8);
                 }
+            }
+        });
+
+        Button buttonExit = findViewById(R.id.buttonExit);
+        buttonExit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        Button buttonReset = findViewById(R.id.buttonReset);
+        buttonReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               restartMatch();
             }
         });
     }
