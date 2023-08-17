@@ -20,6 +20,7 @@ public class AddPlayers extends AppCompatActivity {
         EditText playerTwo  = findViewById(R.id.playerTwo);
         Button startGameButton = findViewById(R.id.startGameButton);
 
+
         startGameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,7 +29,7 @@ public class AddPlayers extends AppCompatActivity {
 
 
                 if (getPlayerOneName.isEmpty() || getPlayerTwoName.isEmpty()){
-                    Toast.makeText(AddPlayers.this, "Please enter player name", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddPlayers.this, "Please enter names", Toast.LENGTH_SHORT).show();
                 }else {
                     Intent intent = new Intent(AddPlayers.this, MainActivity.class);
                     intent.putExtra("playerOne", getPlayerOneName);
