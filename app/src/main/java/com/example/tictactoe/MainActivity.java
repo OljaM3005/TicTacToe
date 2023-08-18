@@ -127,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
     private void performAction(ImageView imageView, int selectedBoxPosition){
         boxPositions[selectedBoxPosition] = playerTurn;
 
+
         if(playerTurn == 1) {
             imageView.setImageResource(R.drawable.x_image);
 
